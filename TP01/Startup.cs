@@ -1,4 +1,4 @@
-﻿// TP01 - Sérgio Wu (CB3025691)
+﻿// TP01 - Sérgio Wu (CB3025691) / Leonardo de Lima (CB3026655)
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
