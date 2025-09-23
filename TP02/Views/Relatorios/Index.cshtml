@@ -1,0 +1,31 @@
+﻿@model IEnumerable<GerenciadorBLContainer.Models.BL>
+
+<h2>Relatório de BLs e Contêineres</h2>
+
+@foreach (var bl in Model)
+{
+    <h3>BL: @bl.Numero</h3>
+    <p>Consignee: @bl.Consignee | Navio: @bl.Navio</p>
+    
+    <h4>Contêineres Associados:</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Tipo</th>
+                <th>Tamanho</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var container in bl.Containers)
+            {
+                <tr>
+                    <td>@container.Numero</td>
+                    <td>@container.Tipo</td>
+                    <td>@container.Tamanho</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <hr />
+}
